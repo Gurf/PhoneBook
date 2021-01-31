@@ -5,13 +5,13 @@ public class PhoneBook {
 
     public static void main(String[] args) {
         //Добавить считывание ввода пользователя в цикле
-        String[][] phoneBookBase = new String[1][2];
+        String[][] phoneBookBase = new String[250][2];
         System.out.println("Введите абонента в формате: фамилия имя отчество!");
         int count = 0;//счетчик числа записей в phoneBookBase
         Scanner scanner = new Scanner(System.in);
 
         boolean isCorrectName = false;
-        boolean isCorrectNumber = false;
+        boolean isCorrectNumber;
         while (!isCorrectName) {//надо попробовать убрать while!-не получится
             String name = scanner.nextLine(); //Считывает строку из System.in
             isCorrectName = checkName(name);
