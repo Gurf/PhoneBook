@@ -5,7 +5,7 @@ public class PhoneBook {
 
     public static void main(String[] args) {
         //Добавить считывание ввода пользователя в цикле
-        String[][] phoneBookBase = new String[250][2];
+        String[][] phoneBookBase = new String[2][2];
         System.out.println("Введите абонента в формате: фамилия имя отчество!");
         int count = 0;//счетчик числа записей в phoneBookBase
         Scanner scanner = new Scanner(System.in);
@@ -45,8 +45,21 @@ public class PhoneBook {
                     System.out.println("Сохранено: " + numberTemp);
                     add(phoneBookBase, fioTemp, numberTemp, count);
                     count++;//пинаем счетчик
+//                    System.out.println(phoneBookBase.length);
+//                    System.out.println(count);
+//                    System.out.println(Arrays.deepToString(phoneBookBase));//ВЫводим на печать массив
+
                     isCorrectName = false;
                 }
+            }
+            //увеличиваем длину имеющегося массива на половину при его наполнении и инициализируем пустыми строками
+            if (count == phoneBookBase.length) {
+
+                phoneBookBase = Arrays.copyOf(phoneBookBase, phoneBookBase.length + phoneBookBase.length / 2);
+                for (int i = count; i < phoneBookBase.length; i++) {
+                    phoneBookBase[i] = new String[2];
+                }
+//                System.out.println(Arrays.deepToString(phoneBookBase));//ВЫводим на печать массив
             }
         }
     }
@@ -93,5 +106,6 @@ public class PhoneBook {
     //выводим ФИО и номер телефона, если ФИО абонента уже имеется в базе
     public static void list(String[][] book, int index) {
         System.out.println(book[index][0] + ": " + book[index][1]);
+
     }
 }
