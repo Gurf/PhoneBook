@@ -58,8 +58,8 @@ public class PhoneBook {
                 newLengthArr(phoneBookBase);//c вызовом этого метода не работет
 
                 //то увеличиваем длину массива
-                phoneBookBase = Arrays.copyOf(phoneBookBase, phoneBookBase.length + phoneBookBase.length / 2);
-                /*for (int i = count; i < phoneBookBase.length; i++) {
+                /*phoneBookBase = Arrays.copyOf(phoneBookBase, phoneBookBase.length + phoneBookBase.length / 2);
+                for (int i = count; i < phoneBookBase.length; i++) {
                     phoneBookBase[i] = new String[2];
                 }*/
 
