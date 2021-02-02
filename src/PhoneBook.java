@@ -30,7 +30,7 @@ public class PhoneBook {
 
                     } else if (i == count) {
                         System.out.println(fioTemp);
-                        System.out.println("Новая запись, введите номер телефона (11 цифр)!");
+                        System.out.println("Новая запись, введите номер телефона (2 цифры)!");
                         isCorrectNumber = false;
                     }
                 }
@@ -58,8 +58,8 @@ public class PhoneBook {
                 newLengthArr(phoneBookBase);//c вызовом этого метода не работет
 
                 //то увеличиваем длину массива
-                /*phoneBookBase = Arrays.copyOf(phoneBookBase, phoneBookBase.length + phoneBookBase.length / 2);
-                for (int i = count; i < phoneBookBase.length; i++) {
+                phoneBookBase = Arrays.copyOf(phoneBookBase, phoneBookBase.length + phoneBookBase.length / 2);
+                /*for (int i = count; i < phoneBookBase.length; i++) {
                     phoneBookBase[i] = new String[2];
                 }*/
 
