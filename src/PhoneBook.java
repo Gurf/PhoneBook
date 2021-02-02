@@ -90,13 +90,13 @@ public class PhoneBook {
 
     public static boolean checkNumber(String phoneNumber) {
         String clean = phoneNumber.replaceAll("[^0-9]", "");
-        return clean.length() == 2;
+        return clean.length() == 11;
     }
 
     public static String formatNumber(String telephoneN) {
         String clean = telephoneN.replaceAll("[^0-9]", "");
 
-        String output = "+7 " + clean/*clean.substring(1, 4) + " " + clean.substring(4, 7) + " " + clean.substring(7, 9) + " " + clean.substring(9, 11)*/;
+        String output = "+7 " + clean.substring(1, 4) + " " + clean.substring(4, 7) + " " + clean.substring(7, 9) + " " + clean.substring(9, 11);
 
         return output;
     }
